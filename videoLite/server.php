@@ -67,12 +67,13 @@ if ($uploadOk == 0) {
             $servername = $_SERVER["SERVER_NAME"];
 
           // 
+          echo("'http://" . $servername.":8888/videoLite/uploads/".basename( $_FILES["fileToUpload"]["name"])."'");
           echo("</br></br>
-            <video controls='controls' width='200' height='150' name='Video Name' src='http://" . $servername.":8888/videoLite/uploads/".basename( $_FILES["fileToUpload"]["name"])."'></video>
+            <video controls='controls' width='200' height='150' name='Video Name' src='http://" . $servername.":8888/uploads/".basename( $_FILES["fileToUpload"]["name"])."'></video>
             <a onclick=redir()>BACK</a>
             <script>
             function redir(){
-                window.location.assign('http://" . $servername.":8888/videoLite/redirector.php');
+                window.location.assign('http://" . $servername.":8888/redirector.php');
             }
 
             </script>
